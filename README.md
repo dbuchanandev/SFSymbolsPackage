@@ -1,7 +1,9 @@
 # SFSymbolsPackage
 
 ## Description
-I wanted an easier way to access SF Symbols. I'm far from the first to do this, but it has some extra stuff I wanted.
+I wanted an easier way to access SF Symbols in my projects. This has some added organization and a few convenience features.
+My goal is to make this easier to maintain as Apple updates their available SF Symbols.
+Also, if anyone at Apple happens to come across this, I would love to kill this project. 😜
 All Symbols and Categories are listed here in the order in which they are presented in the macOS SF Symbols app Version 1.1 (16).
 
 ## Usage
