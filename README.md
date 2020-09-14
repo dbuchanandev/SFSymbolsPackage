@@ -6,10 +6,19 @@ All Symbols and Categories are listed here in the order in which they are presen
 
 ## Usage
 You're going to have a better time with this if you use generic types that conform to the `SFSymbol` protocol.
+
+All enums here conform to `CaseIterable` and `Identifiable`. You won't need to provide your own `id:` when used with `ForEach` in SwiftUI.
+
+
 ```swift
 struct ExampleSwiftUIView<S>: View where S: SFSymbol{
 
 // let appleLogo: S = SFSymbols.applelogo
+
+/* 
+    Other nested enums are available if you want to search or iterate over a specific category
+    let phoneSymbol: S = SFSymbols.Communication.phone
+*/
 
 let symbol: S
 
