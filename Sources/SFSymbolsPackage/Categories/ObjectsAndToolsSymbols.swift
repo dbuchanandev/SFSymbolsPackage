@@ -8,7 +8,7 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Objects And Tools
-    public enum ObjectsAndTools: String, CaseIterable, Identifiable {
+    public enum ObjectsAndTools: String, SFSymbol {
         public var id: String { rawValue }
         
         case pencil = "pencil"

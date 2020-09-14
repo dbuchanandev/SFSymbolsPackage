@@ -8,7 +8,7 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Keyboard
-    public enum Keyboard: String, CaseIterable, Identifiable {
+    public enum Keyboard: String, SFSymbol {
         public var id: String { rawValue }
         
         case command = "command"

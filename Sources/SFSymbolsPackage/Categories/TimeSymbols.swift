@@ -8,7 +8,7 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Time
-    public enum Time: String, CaseIterable, Identifiable {
+    public enum Time: String, SFSymbol {
         public var id: String { rawValue }
         
         case clock = "clock"
