@@ -8,8 +8,8 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Arrows
-    enum Arrows: String, CaseIterable, Identifiable {
-        var id: String { rawValue }
+    public enum Arrows: String, CaseIterable, Identifiable {
+        public var id: String { rawValue }
         
         case arrowshapeTurnUpLeft = "arrowshape.turn.up.left"
         case arrowshapeTurnUpLeftFill = "arrowshape.turn.up.left.fill"

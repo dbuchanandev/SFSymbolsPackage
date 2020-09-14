@@ -8,8 +8,8 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - TextFormatting
-    enum TextFormatting: String, CaseIterable, Identifiable {
-        var id: String { rawValue }
+    public enum TextFormatting: String, CaseIterable, Identifiable {
+        public var id: String { rawValue }
         
         case paragraph = "paragraph"
         case listDash = "list.dash"

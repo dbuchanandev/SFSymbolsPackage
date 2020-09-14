@@ -8,8 +8,8 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Uncategorized
-    enum Uncategorized: String, CaseIterable, Identifiable {
-        var id: String { rawValue }
+    public enum Uncategorized: String, CaseIterable, Identifiable {
+        public var id: String { rawValue }
         
         case squareAndArrowUp = "square.and.arrow.up"
         case squareAndArrowUpFill = "square.and.arrow.up.fill"

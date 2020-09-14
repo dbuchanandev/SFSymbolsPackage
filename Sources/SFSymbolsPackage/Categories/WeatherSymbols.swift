@@ -8,8 +8,8 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Weather
-    enum Weather: String, CaseIterable, Identifiable {
-        var id: String { rawValue }
+    public enum Weather: String, CaseIterable, Identifiable {
+        public var id: String { rawValue }
         
         case sunMin = "sun.min"
         case sunMinFill = "sun.min.fill"

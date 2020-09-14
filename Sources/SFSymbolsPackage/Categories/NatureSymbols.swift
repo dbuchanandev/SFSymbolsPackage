@@ -8,8 +8,8 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Nature
-    enum Nature: String, CaseIterable, Identifiable {
-        var id: String { rawValue }
+    public enum Nature: String, CaseIterable, Identifiable {
+        public var id: String { rawValue }
         
         case flame = "flame"
         case flameFill = "flame.fill"

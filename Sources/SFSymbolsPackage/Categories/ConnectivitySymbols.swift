@@ -8,8 +8,8 @@
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension SFSymbols {
     //MARK: - Connectivity
-    enum Connectivity: String, CaseIterable, Identifiable {
-        var id: String { rawValue }
+    public enum Connectivity: String, CaseIterable, Identifiable {
+        public var id: String { rawValue }
         
         case wifi = "wifi"
         case wifiSlash = "wifi.slash"
