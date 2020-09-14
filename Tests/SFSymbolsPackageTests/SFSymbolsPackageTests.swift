@@ -1,6 +1,8 @@
 import XCTest
+import SwiftUI
 @testable import SFSymbolsPackage
 
+@available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 final class SFSymbolsPackageTests: XCTestCase {
     
     func testCategorizedCounts() {
@@ -37,10 +39,21 @@ final class SFSymbolsPackageTests: XCTestCase {
         XCTAssertEqual(SFSymbols.All.pencil.id, "pencil")
         XCTAssertEqual(SFSymbols.Math.sum.id, "sum")
     }
+    
+    func testImageInits() {
+        let swiftUIImage = Image(symbol: SFSymbols._00Circle)
+        let comparisonImage = Image(systemName: "00.circle")
+        XCTAssertEqual(swiftUIImage, comparisonImage)
+        
+        let phoneSymbol = SFSymbols.Communication.phone
+        let phoneComparisonImage = Image(systemName: "phone")
+        XCTAssertEqual(phoneComparisonImage, Image(symbol: phoneSymbol))
+    }
 
     static var allTests = [
         ("testCounts", testCategorizedCounts),
         ("testAllCount", testAllCount),
         ("testIDString", testIDString),
+        ("testImageInits",testImageInits),
     ]
 }

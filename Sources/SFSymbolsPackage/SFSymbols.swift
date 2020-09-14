@@ -7,11 +7,13 @@
 
 //TODO: Actual availability of these symbols have not been checked for previous OS versions
 
+//TODO: Link categorized cases to raw values here for single source of truth
+
 /*
  All Symbols and Categories are listed here in the order in which they are presented in the macOS SF Symbols app Version 1.1 (16).
  */
 
-@available(OSX 10.15, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
+@available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 public enum SFSymbols: String, CaseIterable, Identifiable {
     public var id: String { rawValue }
     
