@@ -10,6 +10,8 @@ import SwiftUI
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 extension Image {
     
+    //TODO: There has to be a better way to do this that Xcode will complain about less
+    
     //MARK: - SF Symbols Image Init
     public init(symbol: SFSymbols) {
         self.init(systemName: symbol.id)
