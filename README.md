@@ -22,6 +22,8 @@ var body: some View {
     
 }
 ```
+### Example Project
+[SymbolGrid-Demo](https://github.com/donavoncade/SymbolGrid-Demo/)
 
 ## Contact
 [Twitter: @dbuchanandev](https://twitter.com/dbuchanandev)
