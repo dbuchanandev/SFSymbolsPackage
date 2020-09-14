@@ -4,6 +4,25 @@
 I wanted an easier way to access SF Symbols. I'm far from the first to do this, but it has some extra stuff I wanted.
 All Symbols and Categories are listed here in the order in which they are presented in the macOS SF Symbols app Version 1.1 (16).
 
+## Usage
+You're going to have a better time with this if you use generic types that conform to the `SFSymbol` protocol.
+```swift
+struct ExampleSwiftUIView<S>: View where S: SFSymbol{
+
+// let appleLogo: S = SFSymbols.applelogo
+
+let symbol: S
+
+var body: some View {
+        Image(symbol: symbol)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .padding()
+    }
+    
+}
+```
+
 ## Contact
 [Twitter: @dbuchanandev](https://twitter.com/dbuchanandev)
 
