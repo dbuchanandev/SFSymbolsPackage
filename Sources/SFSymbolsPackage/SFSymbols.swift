@@ -1,4 +1,20 @@
-public enum SFSymbols: String, CaseIterable {
+//
+//  SFSymbols.swift
+//  
+//
+//  Created by Donavon Buchanan on 9/12/20.
+//
+
+//TODO: Actual availability of these symbols have not been checked for previous OS versions
+
+/*
+ All Symbols and Categories are listed here in the order in which they are presented in the macOS SF Symbols app Version 1.1 (16).
+ */
+
+@available(OSX 10.15, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
+public enum SFSymbols: String, CaseIterable, Identifiable {
+    public var id: String { rawValue }
+    
     case squareAndArrowUp = "square.and.arrow.up"
     case squareAndArrowUpFill = "square.and.arrow.up.fill"
     case squareAndArrowDown = "square.and.arrow.down"
@@ -464,7 +480,7 @@ public enum SFSymbols: String, CaseIterable {
     case memoriesBadgePlus = "memories.badge.plus"
     case memoriesBadgeMinus = "memories.badge.minus"
     case shuffle = "shuffle"
-    case _repeat = "repeat"
+    case `repeat` = "repeat"
     case repeat_1 = "repeat.1"
     case infinity = "infinity"
     case megaphone = "megaphone"
@@ -1843,7 +1859,7 @@ public enum SFSymbols: String, CaseIterable {
     case arrowLeftToLine = "arrow.left.to.line"
     case arrowRightToLineAlt = "arrow.right.to.line.alt"
     case arrowRightToLine = "arrow.right.to.line"
-    case _return = "return"
+    case `return` = "return"
     case arrowClockwise = "arrow.clockwise"
     case arrowClockwiseCircle = "arrow.clockwise.circle"
     case arrowClockwiseCircleFill = "arrow.clockwise.circle.fill"
