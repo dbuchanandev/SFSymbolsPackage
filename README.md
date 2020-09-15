@@ -33,6 +33,43 @@ var body: some View {
     
 }
 ```
+
+#### Initialization
+```swift
+// SwiftUI Image
+let image = Image(symbol: SFSymbols._00Circle)
+
+// SwiftUI Label - available on iOS 14+, OSX 11+, watchOS 7+, tvOS 14+
+let label = Label("Title String", symbol: SFSymbols._00Circle)
+
+// UIImage
+let image = UIImage(symbol: SFSymbols._00Circle)
+```
+
+#### Categories
+```swift
+SFSymbols.Communication
+SFSymbols.Weather
+SFSymbols.ObjectsAndTools
+SFSymbols.Devices
+SFSymbols.Connectivity
+SFSymbols.Transportation
+SFSymbols.Human
+SFSymbols.Nature
+SFSymbols.Editing
+SFSymbols.TextFormatting
+SFSymbols.Media
+SFSymbols.Keyboard
+SFSymbols.Commerce
+SFSymbols.Time
+SFSymbols.Health
+SFSymbols.Shapes
+SFSymbols.Arrows
+SFSymbols.Indices
+SFSymbols.Math
+SFSymbols.Uncategorized
+```
+
 ### Example Project
 [SymbolGrid-Demo](https://github.com/donavoncade/SymbolGrid-Demo/)
 
