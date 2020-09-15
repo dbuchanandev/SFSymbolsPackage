@@ -5,7 +5,7 @@
 //  Created by Donavon Buchanan on 9/13/20.
 //
 
-@available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
+@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 extension SFSymbols {
     //MARK: - Media
     public enum Media: String, SFSymbol {

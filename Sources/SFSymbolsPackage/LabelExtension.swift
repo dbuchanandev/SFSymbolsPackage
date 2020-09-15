@@ -8,10 +8,10 @@
 import SwiftUI
 
 @available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
-extension Label where Title == Text, Icon == Image {
+public extension Label where Title == Text, Icon == Image {
     
     //MARK: - SF Symbols Label Init
-    public init<S, Symbol>(_ title: S, symbol: Symbol) where S : StringProtocol, Symbol: SFSymbol {
+    init<S, Symbol>(_ title: S, symbol: Symbol) where S : StringProtocol, Symbol: SFSymbol {
         self.init(
             title: { Text(title) },
             icon: { Image(systemName: symbol.id) }

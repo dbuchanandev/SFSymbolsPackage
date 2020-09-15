@@ -17,7 +17,7 @@ public protocol SFSymbol: CaseIterable, Identifiable {
     var id: String { get }
 }
 
-@available(OSX 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
+@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public enum SFSymbols: String, SFSymbol {
     public var id: String { rawValue }
     
