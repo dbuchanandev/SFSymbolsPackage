@@ -18,7 +18,9 @@ struct ExampleSwiftUIView: View {
 let symbol: String
 
 var body: some View {
-    Image(systemName: symbol)
+
+    // Provided inits accept String or any type conforming to SFSymbol protocol
+    Image(symbol: symbol)
         .resizable()
         .aspectRatio(contentMode: .fit)
         .padding()
@@ -39,6 +41,8 @@ struct ExampleSwiftUIView<S:SFSymbol>: View {
 let symbol: S
 
 var body: some View {
+
+    // Provided inits accept String or any type conforming to SFSymbol protocol
     Image(symbol: symbol)
         .resizable()
         .aspectRatio(contentMode: .fit)
