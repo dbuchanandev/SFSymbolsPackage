@@ -58,12 +58,14 @@ var body: some View {
 let image = Image(symbol: SFSymbols._00Circle)
 // or
 let image = Image(symbol: SFSymbols._00Circle)
-
+```
+```swift
 // SwiftUI Label - available on iOS 14+, OSX 11+, watchOS 7+, tvOS 14+
 let label = Label("Title String", symbol: SFSymbols._00Circle)
 // or
 let label = Label("Title String", symbol: SFSymbols._00Circle.id)
-
+```
+```swift
 // UIImage
 let image = UIImage(symbol: SFSymbols._00Circle)
 // or
