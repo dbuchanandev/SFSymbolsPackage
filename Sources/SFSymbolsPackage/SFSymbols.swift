@@ -12,13 +12,13 @@
 /*
  All Symbols and Categories are listed here in the order in which they are presented in the macOS SF Symbols app Version 1.1 (16).
  */
-
 public protocol SFSymbol: CaseIterable, Identifiable {
     var id: String { get }
 }
 
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public enum SFSymbols: String, SFSymbol {
+    
     public var id: String { rawValue }
     
     case squareAndArrowUp = "square.and.arrow.up"

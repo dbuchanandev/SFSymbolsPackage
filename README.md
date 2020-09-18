@@ -4,28 +4,42 @@
 I wanted an easier way to access SF Symbols in my projects. This has some added organization and a few convenience features.
 My goal is to make this easier to maintain as Apple updates their available SF Symbols.
 Also, if anyone at Apple happens to come across this, I would love to kill this project. 😜
-All Symbols and Categories are listed here in the order in which they are presented in the macOS SF Symbols app Version 1.1 (16).
+All SFSymbols and Categories are listed here in the order in which they are presented in the macOS SF Symbols app Version 1.1 (16).
+All enums in this package conform to `CaseIterable` and `Identifiable`. You won't need to provide your own `id:` when used with `ForEach` in SwiftUI.
 
 ## Usage
-You're going to have a better time with this if you use generic types that conform to the `SFSymbol` protocol.
-
-All enums here conform to `CaseIterable` and `Identifiable`. You won't need to provide your own `id:` when used with `ForEach` in SwiftUI.
-
-
+#### Symbol String ID
 ```swift
-struct ExampleSwiftUIView<S>: View where S: SFSymbol{
+import SwiftUI
+import SFSymbolsPackage
 
-// let appleLogo: S = SFSymbols.applelogo
+struct ExampleSwiftUIView: View {
 
-/* 
-    Other nested enums are available if you want to search or iterate over a specific category
-    let phoneSymbol: S = SFSymbols.Communication.phone
-*/
+let symbol: String
+
+var body: some View {
+    Image(systemName: symbol)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .padding()
+    }
+
+}
+```
+
+#### Generic usage
+If you're not using mixed categorized symbols, it may be easier use generic types that conform to the `SFSymbol` protocol.
+Even though they have the same RawValue type, mixing symbol categories will not compile the way this is written currently. If you know how to fix this, let me know.
+```swift
+import SwiftUI
+import SFSymbolsPackage
+
+struct ExampleSwiftUIView<S:SFSymbol>: View {
 
 let symbol: S
 
 var body: some View {
-        Image(symbol: symbol)
+    Image(symbol: symbol)
         .resizable()
         .aspectRatio(contentMode: .fit)
         .padding()

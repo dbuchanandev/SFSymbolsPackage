@@ -13,6 +13,11 @@ public extension UIImage {
     convenience init?<S>(symbol: S) where S: SFSymbol {
         self.init(systemName: symbol.id)
     }
+    
+    //Add String option to make it easy to swap between SFSymbol or its .id String
+    convenience init?(symbol: String) {
+        self.init(systemName: symbol)
+    }
 }
 
 #endif

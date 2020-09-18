@@ -15,4 +15,9 @@ public extension Image {
         self.init(systemName: symbol.id)
     }
     
+    //Add String option to make it easy to swap between SFSymbol or its .id String
+    init(symbol: String) {
+        self.init(systemName: symbol)
+    }
+    
 }

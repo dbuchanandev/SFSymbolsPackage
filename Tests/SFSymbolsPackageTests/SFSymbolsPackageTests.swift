@@ -6,7 +6,7 @@ import SwiftUI
 final class SFSymbolsPackageTests: XCTestCase {
     
     func testCategorizedCounts() {
-        XCTAssertEqual(SFSymbols.All.allCases.count, 2387)
+        XCTAssertEqual(SFSymbols.allCases.count, 2387)
         XCTAssertEqual(SFSymbols.Communication.allCases.count, 70)
         XCTAssertEqual(SFSymbols.Weather.allCases.count, 65)
         XCTAssertEqual(SFSymbols.ObjectsAndTools.allCases.count, 211)
@@ -32,11 +32,10 @@ final class SFSymbolsPackageTests: XCTestCase {
     func testAllCount() {
         // This is not the "All" category
         XCTAssertEqual(SFSymbols.allCases.count, 2387)
-        XCTAssertEqual(SFSymbols.allCases.count, SFSymbols.All.allCases.count)
     }
     
     func testIDString() {
-        XCTAssertEqual(SFSymbols.All.pencil.id, "pencil")
+        XCTAssertEqual(SFSymbols.pencil.id, "pencil")
         XCTAssertEqual(SFSymbols.Math.sum.id, "sum")
     }
     
@@ -48,6 +47,10 @@ final class SFSymbolsPackageTests: XCTestCase {
         let phoneSymbol = SFSymbols.Communication.phone
         let phoneComparisonImage = Image(systemName: "phone")
         XCTAssertEqual(phoneComparisonImage, Image(symbol: phoneSymbol))
+        
+        //String init
+        let image = Image(symbol: "00.circle")
+        XCTAssertNotNil(image)
     }
     
     
@@ -55,11 +58,19 @@ final class SFSymbolsPackageTests: XCTestCase {
     func testLabelInits() {
         let label = Label("Test Title", symbol: SFSymbols._00Circle)
         XCTAssertNotNil(label)
+        
+        //String init
+        let stringlyLabel = Label("Test Title", symbol: SFSymbols._00Circle.id)
+        XCTAssertNotNil(stringlyLabel)
     }
     
     func testUIImageInit() {
         let image = UIImage(symbol: SFSymbols._00Circle)
         XCTAssertNotNil(image)
+        
+        //String init
+        let stringlyImage = UIImage(symbol: SFSymbols._00Circle.id)
+        XCTAssertNotNil(stringlyImage)
     }
     
     func testNilSymbols() {

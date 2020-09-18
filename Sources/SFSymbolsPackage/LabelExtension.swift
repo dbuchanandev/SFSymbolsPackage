@@ -17,4 +17,12 @@ public extension Label where Title == Text, Icon == Image {
             icon: { Image(systemName: symbol.id) }
         )
     }
+    
+    //Add String option to make it easy to swap between SFSymbol or its .id String
+    init<S>(_ title: S, symbol: String) where S : StringProtocol{
+        self.init(
+            title: { Text(title) },
+            icon: { Image(systemName: symbol) }
+        )
+    }
 }
